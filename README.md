@@ -10,7 +10,7 @@
 <h3>-React</h3>
 <h3>-Chakra UI</h3>
 
-<h3>Website Deployed link : </h3>
+<h3>Website Deployed link : https://thriving-begonia-160062.netlify.app/</h3>
 
 <h1>Website Pictures</h1>
 
