@@ -226,18 +226,67 @@
     #payment_logo {
         display: none;
     }
+
     #loco_grid {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
-    #video{
+
+    #video {
         width: 90%;
     }
-    #playingGames{
+
+    #playingGames {
         margin-top: -10px;
         margin-left: 20%;
         font-size: 60px;
     }
 }
 
-@media screen and (max-width:759px) and (min-width:200px) {}
+@media screen and (max-width:759px) and (min-width:200px) {
+    #payment_logo {
+        display: none;
+    }
+
+    #loco_grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #video {
+        width: 90%;
+    }
+
+    #playingGames {
+        margin-top: -0px;
+        display: none;
+    }
+
+    #white {
+        width: 100%;
+        margin: auto;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: space-around;
+        padding: 60px;
+    }
+
+    #pay_desc>h5 {
+        width: 80%;
+    }
+
+    #payment_logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    #process {
+        display: block;
+        margin-left: 0;
+    }
+
+    #yellow {
+        height: 600px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

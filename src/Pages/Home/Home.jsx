@@ -88,25 +88,25 @@ export default function Home() {
                 </div>
             </div>
 
-<div id={style.game_img}>
-    <div>
-    <img src="./kids.png" alt="" />
-    </div>
-</div>
+            <div id={style.game_img}>
+                <div>
+                    <img src="./kids.png" alt="" />
+                </div>
+            </div>
 
             <div id={style.yellow}>
-<div className={style.match_div}>
-   <h1>Total Views</h1>
-   <p>500+</p>
-</div>
-<div className={style.match_div}>
-<h1>Total Bookings</h1>
-   <p>1k+</p>
-</div>
-<div className={style.match_div}>
-<h1>Total Matchs</h1>
-   <p>2k+</p>
-</div>
+                <div className={style.match_div}>
+                    <h1>Total Views</h1>
+                    <p>500+</p>
+                </div>
+                <div className={style.match_div}>
+                    <h1>Total Bookings</h1>
+                    <p>1k+</p>
+                </div>
+                <div className={style.match_div}>
+                    <h1>Total Matchs</h1>
+                    <p>2k+</p>
+                </div>
             </div>
         </div>
     )

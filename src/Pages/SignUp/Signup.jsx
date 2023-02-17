@@ -23,7 +23,7 @@ export default function Signup() {
         setFormData({ ...formData, [name]: value })
     }
 
-    const HandleSubmit = () => {
+    const HandleSubmit = async () => {
 
 
 
@@ -43,7 +43,36 @@ export default function Signup() {
                         email: formData.email,
                         password: formData.password
                     }
-                    axios.post(`http://localhost:8080/users`, payload)
+                    // try {
+                    //     let res = await fetch(`https://play-game-api.onrender.com/users`, {
+                    //         method: "POST",
+                    //         body: JSON.stringify(payload),
+                    //         headers: { 'Content-Type': 'application/json' }
+                    //     })
+                    //     let data = await res.json();
+
+                    //     toast({
+                    //         duration: 2500,
+                    //         status: "success",
+                    //         title: "Success",
+                    //         description: 'Signup Successfull, Please login',
+                    //         position: 'top'
+                    //     })
+                    //     setTimeout(() => {
+                    //         navigate('/login')
+                    //     }, 2000);
+                    // } catch (e) {
+                    //     console.log(e)
+                    //     toast({
+                    //         duration: 2500,
+                    //         status: "error",
+                    //         title: "Error",
+                    //         description: 'Somthing went wrong',
+                    //         position: 'top'
+                    //     })
+                    // }
+
+                    axios.post(`https://play-game-api.onrender.com/users`, payload)
                         .then((r) => {
                             // console.log(r)
                             toast({
@@ -101,7 +130,7 @@ export default function Signup() {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/users`)
+        axios.get(`https://play-game-api.onrender.com/users`)
             .then((r) => {
                 SetUsers(r.data)
             })
@@ -114,20 +143,20 @@ export default function Signup() {
                 <img src="./logo.png" alt="" />
             </div>
             <div id={style.mainnn}>
-            <Box id={style.signup_form}>
-                <FormControl>
-                    <FormLabel fontSize='30px' color='orangered' fontWeight="600">Name*</FormLabel>
-                    <Input fontSize='30px' fontWeight="600" name='name' color="#718096" value={formData.name} onChange={HandleChange} type="text" placeholder='Enter your Name' />
-                    <FormLabel fontSize='30px' color='orangered' fontWeight="600" >Email*</FormLabel>
-                    <Input fontSize='30px' fontWeight="600" name='email' color="#718096" value={formData.email} onChange={HandleChange} type="text" placeholder='Enter your Email' />
-                    <FormLabel fontSize='30px' color='orangered' fontWeight="600">Password*</FormLabel>
-                    <Input fontSize='30px' fontWeight="600" name='password' color="#718096" value={formData.password} onChange={HandleChange} type="text" placeholder='Enter your Password' />
-                    <FormLabel fontSize='30px' color='orangered' fontWeight="600">Confirm Password*</FormLabel>
-                    <Input fontSize='30px' fontWeight="600" name='confirmPassword' color="#718096" value={formData.confirmPassword} onChange={HandleChange} type="text" placeholder='Enter your Confirm Password' />
+                <Box id={style.signup_form}>
+                    <FormControl>
+                        <FormLabel fontSize='30px' color='orangered' fontWeight="600">Name*</FormLabel>
+                        <Input fontSize='30px' fontWeight="600" name='name' color="#718096" value={formData.name} onChange={HandleChange} type="text" placeholder='Enter your Name' />
+                        <FormLabel fontSize='30px' color='orangered' fontWeight="600" >Email*</FormLabel>
+                        <Input fontSize='30px' fontWeight="600" name='email' color="#718096" value={formData.email} onChange={HandleChange} type="text" placeholder='Enter your Email' />
+                        <FormLabel fontSize='30px' color='orangered' fontWeight="600">Password*</FormLabel>
+                        <Input fontSize='30px' fontWeight="600" name='password' color="#718096" value={formData.password} onChange={HandleChange} type="text" placeholder='Enter your Password' />
+                        <FormLabel fontSize='30px' color='orangered' fontWeight="600">Confirm Password*</FormLabel>
+                        <Input fontSize='30px' fontWeight="600" name='confirmPassword' color="#718096" value={formData.confirmPassword} onChange={HandleChange} type="text" placeholder='Enter your Confirm Password' />
 
-                    <Button id={style.btn} onClick={HandleSubmit} >Signup</Button>
-                </FormControl>
-            </Box>
+                        <Button id={style.btn} onClick={HandleSubmit} >Signup</Button>
+                    </FormControl>
+                </Box>
             </div>
         </Box>
     )

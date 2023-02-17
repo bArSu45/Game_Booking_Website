@@ -9,7 +9,7 @@ export default function Cart() {
   const toast = useToast();
 
   const HandleDelete = () => {
-    axios.delete(`http://localhost:8080/cart/${cart[0]?.id}`)
+    axios.delete(`https://play-game-api.onrender.com/cart/${cart[0]?.id}`)
       .then((res) => {
         toast({
           duration: 3000,
@@ -19,9 +19,9 @@ export default function Cart() {
           position: 'top'
         })
 
-        axios.get('http://localhost:8080/cart')
+        axios.get('https://play-game-api.onrender.com/cart')
           .then((res) => {
-            setCart(res.data)
+            setCart([])
           })
           .catch((e) => {
             console.log(e)
@@ -33,7 +33,7 @@ export default function Cart() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:8080/cart')
+    axios.get('https://play-game-api.onrender.com/cart')
       .then((res) => {
         setCart(res.data)
       })

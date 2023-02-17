@@ -7,49 +7,51 @@
       "id": 1
     },
     {
-      "name": "khalid",
-      "email": "khalid@gmail.com",
-      "password": "2",
+      "name": "a",
+      "email": "a",
+      "password": "a",
       "id": 2
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "id": 3
+    },
+    {
+      "name": "a",
+      "email": "b",
+      "password": "a",
+      "id": 4
+    },
+    {
+      "name": "b",
+      "email": "c",
+      "password": "b",
+      "id": 5
     }
   ],
   "games": [
     {
       "id": 1,
       "name": "Catch Fish",
-      "image": "./fish.png",
-      "location": "Baghajatin, Kolkata, WB",
-      "distance": 10
+      "image": "./fish.png"
     },
     {
       "id": 2,
       "name": "Punch Challenge",
-      "image": "./punch.jpg",
-      "location": "Garia, Kolkata, WB",
-      "distance": 20
+      "image": "./punch.jpg"
     },
     {
       "id": 3,
       "name": "Bow & Arrow",
-      "image": "./arrow.jpg",
-      "location": "Sealdaha, Kolkata, WB",
-      "distance": 15
+      "image": "./arrow.jpg"
     },
     {
       "id": 4,
       "name": "Hi Stricker",
-      "image": "./stricker.jpg",
-      "location": "Jadavpur, Kolkata, WB",
-      "distance": 25
+      "image": "./stricker.jpg"
     }
   ],
-  "cart": [
-    {
-      "id": 1,
-      "name": "Catch Fish",
-      "image": "./fish.png",
-      "location": "Baghajatin, Kolkata, WB",
-      "distance": 10
-    }
-  ]
+  "cart": []
 }

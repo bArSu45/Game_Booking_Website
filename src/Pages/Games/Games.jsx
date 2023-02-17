@@ -1,4 +1,4 @@
-import { useToast } from '@chakra-ui/react'
+import { Box, Heading, useToast } from '@chakra-ui/react'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import style from "./Games.module.css"
@@ -10,7 +10,7 @@ export default function Games() {
   const HandleCart = (data) => {
     if (cart.length <= 0) {
 
-      axios.post('http://localhost:8080/cart', data)
+      axios.post('https://play-game-api.onrender.com/cart', data)
         .then((res) => {
           setCart(res.data);
         })
@@ -38,7 +38,7 @@ export default function Games() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:8080/games')
+    axios.get('https://play-game-api.onrender.com/games')
       .then((res) => {
         setGames(res.data)
       })
@@ -46,7 +46,7 @@ export default function Games() {
         console.log(e)
       })
 
-    axios.get('http://localhost:8080/cart')
+    axios.get('https://play-game-api.onrender.com/cart')
       .then((res) => {
         setCart(res.data)
       })
@@ -59,36 +59,19 @@ export default function Games() {
     <div id={style.game_main_div}>
       <div id={style.game_grid}>
 
-        {games && games.length > 0 && games.map((el) => (
+        {games && games.length > 0 ? games.map((el) => (
           <div id={style.game_desc} key={el.id}>
             <div id={style.game_img}>
-            <img src={el.image} alt="" />
+              <img src={el.image} alt="" />
             </div>
             <p>{el.name}</p>
             <button id={style.btn} onClick={() => HandleCart(el)} >Add to Cart</button>
           </div>
-        ))}
-
-        {/* <div>
-          <img src="./fish.png" alt="" />
-          <p>Catch Fish</p>
-          <button onClick={() => HandleCart('Catch Fish')} >Add to Cart</button>
-        </div>
-        <div>
-          <img src="./fish.png" alt="" />
-          <p>Hi Stricker</p>
-          <button onClick={() => HandleCart('Hi Stricker')} >Add to Cart</button>
-        </div>
-        <div>
-          <img src="./fish.png" alt="" />
-          <p>Punch Challange</p>
-          <button onClick={() => HandleCart('Punch Challange')} >Add to Cart</button>
-        </div>
-        <div>
-          <img src="./fish.png" alt="" />
-          <p>Bow & Arrow</p>
-          <button onClick={() => HandleCart('Bow & Arrow')} >Add to Cart</button>
-        </div> */}
+        ))
+          : <Box width={'400%'} minHeight={'70vh'} display='flex' alignItems={'center'} justifyContent={'center'} >
+            <Heading>Loading...</Heading>
+          </Box>
+        }
       </div>
     </div>
   )

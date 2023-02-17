@@ -1,32 +1,38 @@
-#checkout_main{
+#checkout_main {
     color: white;
     background-color: #082032;
     min-height: 110vh;
     padding-top: 150px;
 }
-#checkout{
+
+#checkout {
     display: flex;
     width: 80%;
     justify-content: space-between;
     margin: auto;
 }
-#single_div{
+
+#single_div {
     width: 50%;
     /* border: 2px solid white */
 }
-#img_div{
+
+#img_div {
     width: 90%;
     margin: auto;
 }
-#img_div>img{
+
+#img_div>img {
     width: 100%;
     height: 500px;
 }
-#single_div>p{
+
+#single_div>p {
     font-size: 50px;
     text-align: center;
 }
-#form_div{
+
+#form_div {
     width: 50%;
     border: 2px solid white;
     font-size: 30px;
@@ -36,106 +42,128 @@
     line-height: 60px;
     box-shadow: 5px 10px 12px whitesmoke;
 }
-#set_time>input{
+
+#set_time>input {
     width: 65%;
     color: black;
     height: 40px;
     margin-top: 10px;
 }
-#set_time{
+
+#set_time {
     display: flex;
     justify-content: space-between;
 }
-#btns{
+
+#btns {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-#btn1{
+
+#btn1 {
     padding: 0px 30px 0px 30px;
     background-color: teal;
     border-radius: 10px;
 }
-#btn1:hover{
-    font-weight: 600;
+
+#btn1:hover {
+    color: black;
 }
-#btn2{
+
+#btn2 {
     padding: 0px 30px 0px 30px;
     background-color: rgb(244, 255, 127);
     color: black;
     border-radius: 10px;
 }
-#btn2:hover{
-    font-weight: 600;
+
+#btn2:hover {
+    color: red;
 }
-#select_tag{
+
+#select_tag {
     color: #082032;
     height: 40px;
     margin-top: 10px;
 }
-#select_div{
+
+#select_div {
     display: flex;
     justify-content: space-between;
 }
 
 @media screen and (max-width:1180px) and (min-width:760px) {
-    #checkout_main{
+    #checkout_main {
         min-height: 130vh;
     }
-    #checkout{
+
+    #checkout {
         display: block;
         width: 100%;
     }
-    #single_div{
+
+    #single_div {
         width: 80%;
         margin: auto;
     }
-    #form_div{
+
+    #form_div {
         width: 80%;
         margin: auto;
         height: 500px;
         margin-top: 30px;
     }
-    #btns{
+
+    #btns {
         margin-top: 50px;
     }
 }
 
 @media screen and (max-width:759px) and (min-width:200px) {
-    #checkout_main{
+    #checkout_main {
         min-height: 200vh;
     }
-    #checkout{
+
+    #checkout {
         display: block;
         width: 100%;
     }
-    #single_div{
+
+    #single_div {
         width: 80%;
         margin: auto;
     }
-    #form_div{
+
+    #form_div {
         width: 80%;
         margin: auto;
         height: 1000px;
         margin-top: 30px;
     }
-    #btns{
+
+    #btns {
         margin-top: 50px;
         font-size: 15px;
     }
-    #btn1{
+
+    #btn1 {
         padding: 0px 20px 0px 20px;
     }
-    #select_div{
+
+    #select_div {
         display: block;
     }
-    #select_tag{
+
+    #select_tag {
         width: 100%;
     }
-    #set_time{
+
+    #set_time {
         display: block;
     }
-    #set_time>input{
+
+    #set_time>input {
         width: 100%;
     }
 }

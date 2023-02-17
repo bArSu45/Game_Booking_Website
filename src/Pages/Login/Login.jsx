@@ -4,10 +4,12 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import style from "./Login.module.css"
-export default function Login() {
+
+export default function Login({ isAuth, setIsAuth, userName, setUserName }) {
+
     const toast = useToast();
     const navigate = useNavigate();
-    const [users, SetUsers] = useState([])
+    const [users, SetUsers] = useState([]);
 
     const [formData, setFormData] = useState({
         email: '',
@@ -29,6 +31,9 @@ export default function Login() {
 
             users.filter((el) => {
                 if (el.email === formData.email && el.password === formData.password) {
+                    localStorage.setItem('userName', el.name)
+                    setUserName(el.name)
+                    setIsAuth(true)
                     return count++;
                 } else {
                     return null;
@@ -38,6 +43,7 @@ export default function Login() {
 
             if (count > 0) {
                 localStorage.setItem('isAuth', true)
+
                 toast({
                     duration: 2500,
                     status: "success",
@@ -69,7 +75,7 @@ export default function Login() {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/users`)
+        axios.get(`https://play-game-api.onrender.com/users`)
             .then((r) => {
                 SetUsers(r.data)
             })
