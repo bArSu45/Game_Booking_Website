@@ -26,3 +26,5 @@
 <img src="https://user-images.githubusercontent.com/104006364/219479586-44b9ecb1-4473-4a48-93ed-48fbfd58b069.png"/>
 <h3>Cart Page</h3>
 <img src="https://user-images.githubusercontent.com/104006364/219479600-f7d26c07-f837-4cc7-8c21-a777714edcb6.png"/>
+<h3>Checkout Page</h3>
+<img src="https://user-images.githubusercontent.com/104006364/219588875-5e8794fd-e8e6-4a17-bad7-b3d3887e43ac.png" />
